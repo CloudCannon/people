@@ -8,7 +8,7 @@ import "./ToolTip.scss";
 export interface TooltipProps {
   children?: any;
   targetSelector: string;
-  onTargetChange: (e: HTMLElement | SVGElement | null) => void;
+  onTargetChange?: (e: HTMLElement | SVGElement | null) => void;
 }
 
 /**

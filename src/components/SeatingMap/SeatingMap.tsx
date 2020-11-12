@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React from "react";
 import { ReactComponent as SeatingMapRaw } from "../../data/seating-map.svg";
 import "./SeatingMap.scss";
@@ -35,12 +36,13 @@ const SeatingMap: React.FC<SeatingMapProps> = (props) => {
         <Tooltip
           targetSelector="[data-tooltip]"
           onTargetChange={(e) => {
-            setHighlightedSeat(
-              e?.dataset.name ? parseInt(e?.dataset.name) : null
-            );
+            if (e?.dataset.name) {
+              setHighlightedSeat(parseInt(e?.dataset.name));
+            }
           }}
         >
-          Hello! {highlightedSeat}
+          {/* @ts-expect-error */}
+          Hello! {highlightedSeat ? JSON.stringify(Seats[highlightedSeat]) : ""}
         </Tooltip>
       )}
       <SeatingMapRaw />
