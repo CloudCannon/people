@@ -41,16 +41,26 @@ const Tooltip: React.FC<TooltipProps> = (props) => {
     window.onmousemove = function (e: any) {
       const x = e.clientX;
       const y = e.clientY;
-      let right = false;
+      let offscreenX = false;
+      let offscreenY = false;
 
       if (e.clientX + 100 > window.innerWidth) {
-        right = true;
+        offscreenX = true;
+      }
+      if (e.clientY + 200 > window.innerHeight) {
+        offscreenY = true;
       }
 
       if (tooltipSpan) {
-        tooltipSpan.style.top = y + 20 + "px";
+        if (!offscreenY) {
+          tooltipSpan.style.top = y + 20 + "px";
+          tooltipSpan.style.bottom = '';
+        } else {
+          tooltipSpan.style.top = '';
+          tooltipSpan.style.bottom = 20 + "px";
+        }
 
-        if (!right) {
+        if (!offscreenX) {
           tooltipSpan.style.left = x + 20 + "px";
           tooltipSpan.style.right = "";
         } else {
