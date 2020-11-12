@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import React from "react";
 import { ReactComponent as SeatingMapRaw } from "../../data/seating-map.svg";
+import Profile, { ProfileProps } from "../Profile/Profile";
 import "./SeatingMap.scss";
 import Tooltip from "../Tooltip/Tooltip";
 import Seats from "../../data/seats.json";
@@ -17,9 +18,10 @@ export interface SeatingMapProps {
  */
 const SeatingMap: React.FC<SeatingMapProps> = (props) => {
   const [goTooltip, setGoTooltip] = React.useState(false);
-  const [highlightedSeat, setHighlightedSeat] = React.useState<number | null>(
-    null
-  );
+  const [
+    highlightedSeat,
+    setHighlightedSeat,
+  ] = React.useState<ProfileProps | null>(null);
 
   React.useEffect(() => {
     const elements = Array.from(document.querySelectorAll("[data-name]"));
@@ -37,12 +39,12 @@ const SeatingMap: React.FC<SeatingMapProps> = (props) => {
           targetSelector="[data-tooltip]"
           onTargetChange={(e) => {
             if (e?.dataset.name) {
-              setHighlightedSeat(parseInt(e?.dataset.name));
+              const person = Seats[e.dataset.name as "1"];
+              setHighlightedSeat(person ?? null);
             }
           }}
         >
-          {/* @ts-expect-error */}
-          Hello! {highlightedSeat ? JSON.stringify(Seats[highlightedSeat]) : ""}
+          {highlightedSeat && <Profile {...highlightedSeat} />}
         </Tooltip>
       )}
       <SeatingMapRaw />
