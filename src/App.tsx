@@ -14,7 +14,7 @@ function App() {
           margin-bottom: 54px;
         `}
       >
-        Cloudcannon Seating
+        Cloudcannon People  
       </h1>
       <SeatingMap css={css`max-width: 1000px;`} />
     </div>
