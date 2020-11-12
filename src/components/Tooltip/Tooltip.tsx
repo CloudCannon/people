@@ -7,14 +7,30 @@ import "./ToolTip.scss";
  */
 export interface TooltipProps {
   children?: any;
-  active: boolean;
+  targetSelector: string;
 }
 
 /**
  *  A Tooltip component.
  */
 const Tooltip: React.FC<TooltipProps> = (props) => {
+  const [active, setActive] = React.useState(false);
   React.useEffect(() => {
+    const targetElements = Array.from(
+      document.querySelectorAll(props.targetSelector)
+    );
+
+    for (const element of targetElements) {
+      if (element) {
+        element.addEventListener("mouseenter", () => {
+          setActive(true);
+        });
+        element.addEventListener("mouseleave", () => {
+          setActive(false);
+        });
+      }
+    }
+
     const tooltipSpan = document.querySelector(".tooltip-tip") as
       | HTMLElement
       | SVGElement;
@@ -29,7 +45,7 @@ const Tooltip: React.FC<TooltipProps> = (props) => {
     };
   }, []);
   return (
-    <div className={classnames({ active: props.active }, "tooltip-tip")}>
+    <div className={classnames({ active }, "tooltip-tip")}>
       Tooltip component
     </div>
   );

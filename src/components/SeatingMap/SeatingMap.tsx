@@ -23,21 +23,20 @@ const SeatingMap: React.FC<SeatingMapProps> = (props) => {
       seat.setAttribute("data-tip", "hello!");
       seat.setAttribute("data-for", "main");
       console.log(seat);
-      seat.addEventListener("click", () => {
-        console.log("hello!");
-        // setActive(true);
-      });
+
       seat.addEventListener("mouseenter", () => {
         setActive(true);
       });
-      // seat.classList.add('tooltip');
+      seat.addEventListener("mouseleave", () => {
+        setActive(false);
+      });
     }
   }, []);
 
   return (
     <React.Fragment>
       <div className="regular tooltip">Hover me</div>
-      <Tooltip active={active} />
+      <Tooltip targetSelector=".tooltip" />
       <SeatingMapRaw />
     </React.Fragment>
   );
