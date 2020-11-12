@@ -8,6 +8,7 @@ import "./ToolTip.scss";
 export interface TooltipProps {
   children?: any;
   targetSelector: string;
+  onTargetChange: (e: HTMLElement | SVGElement | null) => void;
 }
 
 /**
@@ -22,11 +23,12 @@ const Tooltip: React.FC<TooltipProps> = (props) => {
 
     for (const element of targetElements) {
       if (element) {
-        console.log("element", element);
         element.addEventListener("mouseenter", () => {
+          props.onTargetChange?.(element as HTMLElement | SVGElement);
           setActive(true);
         });
         element.addEventListener("mouseleave", () => {
+          props.onTargetChange?.(null);
           setActive(false);
         });
       }
