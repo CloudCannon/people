@@ -16,7 +16,7 @@ function App() {
       >
         Cloudcannon Seating
       </h1>
-      <SeatingMap />
+      <SeatingMap css={css`max-width: 1000px;`} />
     </div>
   );
 }

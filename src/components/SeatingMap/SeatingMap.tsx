@@ -1,4 +1,9 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
+/** @jsxRuntime classic */
+/** @jsx jsx */
+
+import { jsx, css } from "@emotion/react";
+
 import React from "react";
 import { ReactComponent as SeatingMapRaw } from "../../data/seating-map.svg";
 import Profile, { ProfileProps } from "../Profile/Profile";
@@ -11,6 +16,8 @@ import Seats from "../../data/seats.json";
  */
 export interface SeatingMapProps {
   children?: any;
+  css?: any;
+  className?: string;
 }
 
 /**
@@ -55,7 +62,7 @@ const SeatingMap: React.FC<SeatingMapProps> = (props) => {
           {highlightedSeat && <Profile {...highlightedSeat} />}
         </Tooltip>
       )}
-      <SeatingMapRaw style={{ width: "100vw" }} />
+      <SeatingMapRaw className={props.className} />
     </React.Fragment>
   );
 };
