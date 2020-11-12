@@ -27,7 +27,15 @@ const SeatingMap: React.FC<SeatingMapProps> = (props) => {
     const elements = Array.from(document.querySelectorAll("[data-name]"));
     for (const element of elements) {
       element.setAttribute("data-tooltip", "true");
+
       element.classList.add("tooltip");
+      element.classList.add("seat");
+      const number = (element as HTMLElement).dataset.name;
+      if (number) {
+        if (!(Seats as Record<string, ProfileProps>)[number as string]) {
+          element.classList.add("empty");
+        }
+      }
     }
     setGoTooltip(true);
   }, []);
@@ -47,7 +55,7 @@ const SeatingMap: React.FC<SeatingMapProps> = (props) => {
           {highlightedSeat && <Profile {...highlightedSeat} />}
         </Tooltip>
       )}
-      <SeatingMapRaw />
+      <SeatingMapRaw style={{ width: "100vw" }} />
     </React.Fragment>
   );
 };
