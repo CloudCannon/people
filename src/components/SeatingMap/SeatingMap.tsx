@@ -27,7 +27,7 @@ const SeatingMap: React.FC<SeatingMapProps> = (props) => {
     const elements = Array.from(document.querySelectorAll("[data-name]"));
     for (const element of elements) {
       element.setAttribute("data-tooltip", "true");
-      // element.classList.add("tooltip");
+      element.classList.add("tooltip");
     }
     setGoTooltip(true);
   }, []);

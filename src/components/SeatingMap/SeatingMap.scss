@@ -1,12 +1,3 @@
 .tooltip {
-  text-decoration: none;
-  position: relative;
-}
-.tooltip span {
-  display: none;
-}
-.tooltip:hover span {
-  display: block;
-  position: fixed;
-  overflow: hidden;
+  cursor: pointer;
 }

@@ -1,7 +1,74 @@
 {
   "1": {
-    "name": "Liam",
+    "name": "Liam Bigelow",
     "title": "Head of Services",
-    "slackLink": "https://cloudcannon.slack.com/team/UB5JMK7T5"
+    "slackLink": "https://cloudcannon.slack.com/team/UB5JMK7T5",
+    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/ddc363cf7a6daee0e72fe17b6a41650f.jpg"
+  },
+  "2": {
+    "name": "Jordan Trbuhovic",
+    "title": "Support & Services Engineer",
+    "slackLink": "",
+    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/3716a9d6b9558598cbb0aca41483a9bd.jpg"
+  },
+  "3": {
+    "name": "Aleksandr Gordeev",
+    "title": "Support & Services Engineer",
+    "slackLink": "",
+    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U01848579B3-84db28690a37-512"
+  },
+  "4": {
+    "name": "Robbie Cook",
+    "title": "Support & Services Engineer",
+    "slackLink": "",
+    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/50136bf90ae971d4ac1ed51e47b5cab1.jpg"
+  },
+  "5": {
+    "name": "Ryan Collins",
+    "title": "Support & Services Engineer",
+    "slackLink": "",
+    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/2d08e67f87a3ed0b16cabc1eb4e8c312.jpg"
+  },
+  "10": {
+    "name": "Farrel Burns",
+    "title": "",
+    "slackLink": "",
+    "profileImage": ""
+  },
+  "11": {
+    "name": "Pedro",
+    "title": "Marketer",
+    "slackLink": "",
+    "profileImage": ""
+  },
+  "12": {
+    "name": "Haowei Yu",
+    "title": "Marketer and Designer",
+    "slackLink": "",
+    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/adc4b5b43871b0a26f6dde09ec9cddf7.jpg"
+  },
+  "13": {
+    "name": "George Phillips",
+    "title": "CTO/Cofounder",
+    "slackLink": "",
+    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/84a90dd23d1342334f22208935163190.jpg"
+  },
+  "14": {
+    "name": "Jonatah Benatti",
+    "title": "Application Engineer",
+    "slackLink": "",
+    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U010E8SGT7C-5ff26f8998b2-512"
+  },
+  "15": {
+    "name": "Nathan Kennedy",
+    "title": "Application Engineer",
+    "slackLink": "",
+    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/ef1d74a78c60e95e07d3e8e6caef607e.jpg"
+  },
+  "16": {
+    "name": "Ross Phillips",
+    "title": "Application Engineer",
+    "slackLink": "",
+    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/ef1d74a78c60e95e07d3e8e6caef607e.jpg"
   }
 }
