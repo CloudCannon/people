@@ -15,28 +15,22 @@ export interface SeatingMapProps {
  *  A SeatingMap component.
  */
 const SeatingMap: React.FC<SeatingMapProps> = (props) => {
-  const [active, setActive] = React.useState(false);
+
+  const [goTooltip, setGoTooltip] = React.useState(false);
 
   React.useEffect(() => {
-    const seats = Array.from(document.querySelectorAll(".tooltip"));
-    for (const seat of seats) {
-      seat.setAttribute("data-tip", "hello!");
-      seat.setAttribute("data-for", "main");
-      console.log(seat);
-
-      seat.addEventListener("mouseenter", () => {
-        setActive(true);
-      });
-      seat.addEventListener("mouseleave", () => {
-        setActive(false);
-      });
+    const elements = Array.from(document.querySelectorAll("[data-name]"));
+    for (const element of elements) {
+      // element.setAttribute("data-tooltip", "true");
+      element.classList.add('tooltip');
     }
+    setGoTooltip(true);
   }, []);
 
   return (
     <React.Fragment>
       <div className="regular tooltip">Hover me</div>
-      <Tooltip targetSelector=".tooltip" />
+      {goTooltip && <Tooltip targetSelector=".tooltip">Hello!</Tooltip>}
       <SeatingMapRaw />
     </React.Fragment>
   );

@@ -22,6 +22,7 @@ const Tooltip: React.FC<TooltipProps> = (props) => {
 
     for (const element of targetElements) {
       if (element) {
+        console.log("element", element);
         element.addEventListener("mouseenter", () => {
           setActive(true);
         });
@@ -46,7 +47,7 @@ const Tooltip: React.FC<TooltipProps> = (props) => {
   }, []);
   return (
     <div className={classnames({ active }, "tooltip-tip")}>
-      Tooltip component
+      {props.children}
     </div>
   );
 };
