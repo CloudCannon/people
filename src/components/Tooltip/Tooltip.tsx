@@ -39,11 +39,22 @@ const Tooltip: React.FC<TooltipProps> = (props) => {
       | SVGElement;
 
     window.onmousemove = function (e: any) {
-      const x = e.clientX,
-        y = e.clientY;
+      const x = e.clientX;
+      const y = e.clientY;
+      let right = false;
+
+      if (e.clientX + 100 > window.innerWidth) {
+        right = true;
+      }
+
       if (tooltipSpan) {
         tooltipSpan.style.top = y + 20 + "px";
-        tooltipSpan.style.left = x + 20 + "px";
+
+        if (!right) {
+          tooltipSpan.style.left = x + 20 + "px";
+        } else {
+          tooltipSpan.style.right = 100 + "px";
+        }
       }
     };
   }, []);
