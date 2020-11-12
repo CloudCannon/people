@@ -52,7 +52,9 @@ const Tooltip: React.FC<TooltipProps> = (props) => {
 
         if (!right) {
           tooltipSpan.style.left = x + 20 + "px";
+          tooltipSpan.style.right = "";
         } else {
+          tooltipSpan.style.left = "";
           tooltipSpan.style.right = 100 + "px";
         }
       }
