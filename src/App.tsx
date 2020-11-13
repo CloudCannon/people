@@ -17,6 +17,7 @@ function App() {
         Cloudcannon People  
       </h1>
       <SeatingMap css={css`max-width: 1000px;`} />
+      <p><a href="https://github.com/CloudCannon/people/issues">Add a feature request</a></p>
     </div>
   );
 }

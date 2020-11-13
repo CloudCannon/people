@@ -17,6 +17,15 @@ code {
     monospace;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: Montserrat,-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+  color: #407afc;
+}
+
 #root {
   width: 100%;
 }
