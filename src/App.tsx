@@ -16,10 +16,15 @@ const App: React.FC = () => {
     (typeof People[keyof typeof People] & { id: string }) | null
   >(null);
   return (
-    <div>
+    <div
+      css={css`
+        max-width: 2000px;
+        margin: 0 auto;
+      `}
+    >
       <header
         css={css`
-          padding: 10px 80px;
+          padding: 10px 30px;
           height: 137px;
         `}
       >
