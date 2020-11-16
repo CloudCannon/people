@@ -12,7 +12,7 @@ import { AutoComplete } from "antd";
 import SearchSidebar from "./components/Sidebar/SearchSidebar";
 import InfoSidebar from "./components/Sidebar/InfoSidebar";
 
-function App() {
+const App: React.FC = () => {
   const [currentPerson, setCurrentPerson] = React.useState<
     typeof People[keyof typeof People] | null
   >(null);
@@ -70,6 +70,6 @@ function App() {
       </main>
     </div>
   );
-}
+};
 
 export default App;
