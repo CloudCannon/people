@@ -17,7 +17,7 @@ export interface SearchSidebarProps {
 /**
  *  A SearchSidebar component.
  */
-const SearchSidebar: React.FC<ComponentProps> = (props) => {
+const SearchSidebar: React.FC<SearchSidebarProps> = (props) => {
   const [data, setData] = React.useState<Array<Record<string, any>> | null>(
     null
   );

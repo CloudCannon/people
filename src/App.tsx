@@ -37,7 +37,7 @@ function App() {
           align-items: flex-start;
         `}
       >
-        <div
+        <aside
           className="list-wrapper"
           css={css`
             max-height: 100vh;
@@ -45,7 +45,7 @@ function App() {
           `}
         >
           <SearchSidebar people={People} />
-        </div>
+        </aside>
         <SeatingMap
           seats={People}
           css={css`
@@ -53,6 +53,15 @@ function App() {
             width: 100%;
           `}
         />
+                <aside
+          className="list-wrapper"
+          css={css`
+            max-height: 100vh;
+            overflow: auto;
+          `}
+        >
+          <SearchSidebar people={People} />
+        </aside>
       </main>
     </div>
   );
