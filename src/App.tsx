@@ -35,6 +35,7 @@ const App: React.FC = () => {
           display: flex;
           flex-wrap: no-wrap;
           align-items: flex-start;
+          justify-content: space-between;
         `}
       >
         <div
