@@ -67,7 +67,7 @@
   },
   "13": {
     "name": "George Phillips",
-    "title": "CTO/Cofounder",
+    "title": "CTO / Cofounder",
     "slackLink": "",
     "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/84a90dd23d1342334f22208935163190.jpg"
   },
@@ -112,5 +112,23 @@
     "title": "UI / UX Designer",
     "slackLink": "",
     "profileImage": "https://ca.slack-edge.com/T027R9XD3-U01D6RKPQKT-87422d42f23d-512"
+  },
+  "21": {
+    "name": "Chris Wingate",
+    "title": "CFO / Professional Footballer",
+    "slackLink": "",
+    "profileImage": "https://ca.slack-edge.com/T027R9XD3-UPU9W152B-fc79642b2721-512"
+  },
+  "22": {
+    "name": "Mike Neumegen",
+    "title": "CEO / Co-founder",
+    "slackLink": "",
+    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U027R9XD7-5c52a99656aa-512"
+  },
+  "23": {
+    "name": "Maryke",
+    "title": "HR Manager",
+    "slackLink": "",
+    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U010CL1J79A-376828101b49-512"
   }
 }
