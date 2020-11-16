@@ -42,10 +42,12 @@ const App: React.FC = () => {
         <div
           className="list-wrapper"
           css={css`
-            max-height: 100vh;
+            max-height: calc(100vh - 137px);
+            overflow: auto;
             min-width: 294px;
             /* margin-left: 20px; */
             margin-right: 20px;
+
           `}
         >
           <SearchSidebar
