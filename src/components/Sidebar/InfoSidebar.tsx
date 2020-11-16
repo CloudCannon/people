@@ -10,7 +10,7 @@ import People from "../../data/seats.json";
  */
 export interface InfoSidebarProps {
   children?: any;
-  person: typeof People[keyof typeof People];
+  person: Partial<typeof People[keyof typeof People]>;
 }
 
 /**

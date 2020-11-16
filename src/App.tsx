@@ -3,7 +3,6 @@
 
 import { jsx, css } from "@emotion/react";
 import React from "react";
-import "./App.css";
 import SeatingMap from "./components/SeatingMap/SeatingMap";
 import "./antd.scss";
 import { List, Avatar } from "antd";
