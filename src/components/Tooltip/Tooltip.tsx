@@ -9,12 +9,15 @@ export interface TooltipProps {
   children?: any;
   targetSelector: string;
   onTargetChange?: (e: HTMLElement | SVGElement | null) => void;
+  tooltipVerticalOffset?: number;
 }
 
 /**
  *  A Tooltip component.
  */
 const Tooltip: React.FC<TooltipProps> = (props) => {
+  const verticalOffset = props.tooltipVerticalOffset ?? 300;
+
   const [active, setActive] = React.useState(false);
   React.useEffect(() => {
     const targetElements = Array.from(
@@ -47,16 +50,16 @@ const Tooltip: React.FC<TooltipProps> = (props) => {
       if (e.clientX + 100 > window.innerWidth) {
         offscreenX = true;
       }
-      if (e.clientY + 200 > window.innerHeight) {
+      if (e.clientY + verticalOffset > window.innerHeight) {
         offscreenY = true;
       }
 
       if (tooltipSpan) {
         if (!offscreenY) {
           tooltipSpan.style.top = y + 20 + "px";
-          tooltipSpan.style.bottom = '';
+          tooltipSpan.style.bottom = "";
         } else {
-          tooltipSpan.style.top = '';
+          tooltipSpan.style.top = "";
           tooltipSpan.style.bottom = 20 + "px";
         }
 

@@ -79,7 +79,14 @@ const SeatingMap: React.FC<SeatingMapProps> = (props) => {
             }
           }}
         >
-          {highlightedSeat && <Profile {...highlightedSeat} />}
+          {highlightedSeat && (
+            <div css={css`
+              background-color: rgba(254, 254, 254, 0.7);
+              padding: 30px;
+            `}>
+              <Profile {...highlightedSeat} />
+            </div>
+          )}
         </Tooltip>
       )}
       <SeatingMapRaw className={props.className} />
