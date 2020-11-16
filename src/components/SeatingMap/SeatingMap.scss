@@ -6,6 +6,11 @@
   opacity: 0.7;
 }
 
+svg .active {
+  & path {
+    fill: orange;
+  }
+}
 // .seat {
 //   background-color: #407afc;
 // }

@@ -10,7 +10,6 @@ import Profile, { ProfileProps } from "../Profile/Profile";
 import "./SeatingMap.scss";
 import Tooltip from "../Tooltip/Tooltip";
 
-
 /**
  * Interface for SeatingMap props
  */
@@ -19,12 +18,14 @@ export interface SeatingMapProps {
   css?: any;
   className?: string;
   seats: Record<string, any>;
+  activeSeat?: string;
 }
 
 /**
  *  A SeatingMap component.
  */
 const SeatingMap: React.FC<SeatingMapProps> = (props) => {
+  // Trigger tooltip after data loaded
   const [goTooltip, setGoTooltip] = React.useState(false);
   const [
     highlightedSeat,
@@ -47,6 +48,20 @@ const SeatingMap: React.FC<SeatingMapProps> = (props) => {
     }
     setGoTooltip(true);
   }, []);
+
+  React.useEffect(() => {
+    const elements = Array.from(document.querySelectorAll("[data-name]"));
+    if (props.activeSeat) {
+      for (const element of elements) {
+        const id = (element as HTMLElement).dataset.name;
+        if (id === props.activeSeat) {
+          element.classList.add("active");
+        } else {
+          element.classList.remove("active");
+        }
+      }
+    }
+  }, [props.activeSeat]);
 
   return (
     <React.Fragment>

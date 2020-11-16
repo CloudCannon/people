@@ -13,14 +13,14 @@ import InfoSidebar from "./components/Sidebar/InfoSidebar";
 
 const App: React.FC = () => {
   const [currentPerson, setCurrentPerson] = React.useState<
-    typeof People[keyof typeof People] | null
+    (typeof People[keyof typeof People] & { id: string }) | null
   >(null);
   return (
     <div>
       <header
         css={css`
-          padding: 20px 80px;
-          height: 100px;
+          padding: 10px 80px;
+          height: 137px;
         `}
       >
         <h1>Cloudcannon People</h1>
@@ -47,11 +47,14 @@ const App: React.FC = () => {
         >
           <SearchSidebar
             people={People}
-            onPersonSelect={(person) => setCurrentPerson(People[person])}
+            onPersonSelect={(person) =>
+              setCurrentPerson({ ...People[person], id: person })
+            }
           />
         </div>
         <SeatingMap
           seats={People}
+          activeSeat={currentPerson?.id}
           css={css`
             max-width: 1000px;
             width: 100%;
