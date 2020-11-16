@@ -21902,12 +21902,13 @@ textarea.ant-input-number {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
+  align-items: center;
+  /* -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: flex-start;
+          align-items: flex-start; */
   max-width: 100%;
 }
 .ant-list-item-meta-avatar {
@@ -21917,10 +21918,13 @@ textarea.ant-input-number {
   -webkit-box-flex: 1;
       -ms-flex: 1 0;
           flex: 1 0;
-  width: 0;
+  width: auto;
   color: rgba(0, 0, 0, 0.85);
 }
 .ant-list-item-meta-title {
+  text-align: left;
+  margin-top: 0;
+
   margin-bottom: 4px;
   color: rgba(0, 0, 0, 0.85);
   font-size: 14px;
