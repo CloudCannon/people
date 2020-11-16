@@ -46,13 +46,8 @@ const SeatingMap: React.FC<SeatingMapProps> = (props) => {
 
         element.classList.add("tooltip");
         element.classList.add("seat");
-        if (number) {
-          if (
-            !(props.seats as Record<string, ProfileProps>)[number as string]
-          ) {
-            element.classList.add("empty");
-          }
-        }
+      } else if (number && parseInt(number) >= 0) {
+        element.classList.add("empty");
       }
     }
     setGoTooltip(true);
