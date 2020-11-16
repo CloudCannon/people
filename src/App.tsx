@@ -9,7 +9,7 @@ import "./antd.css";
 import { List, Avatar } from "antd";
 import People from "./data/seats.json";
 import { AutoComplete } from "antd";
-import Sidebar from "./components/Sidebar/Sidebar";
+import SearchSidebar from "./components/Sidebar/SearchSidebar";
 
 
 function App() {
@@ -44,7 +44,7 @@ function App() {
             overflow: auto;
           `}
         >
-          <Sidebar people={People} />
+          <SearchSidebar people={People} />
         </div>
         <SeatingMap
           seats={People}

@@ -6,17 +6,18 @@ import React from "react";
 import People from "../../data/seats.json";
 
 /**
- * Interface for Component props
+ * Interface for SearchSidebar props
  */
-export interface ComponentProps {
+export interface SearchSidebarProps {
   children?: any;
   people: typeof People;
+  onPersonSelect?: (seatId: number) => void;
 }
 
 /**
- *  A Component component.
+ *  A SearchSidebar component.
  */
-const Component: React.FC<ComponentProps> = (props) => {
+const SearchSidebar: React.FC<ComponentProps> = (props) => {
   const [data, setData] = React.useState<Array<Record<string, any>> | null>(
     null
   );
@@ -32,7 +33,7 @@ const Component: React.FC<ComponentProps> = (props) => {
         if (!searchValue) {
           return true;
         }
-        const lowercaseSearchValue = searchValue.toLowerCase()
+        const lowercaseSearchValue = searchValue.toLowerCase();
         if (item.title.toLowerCase().includes(lowercaseSearchValue)) {
           return true;
         }
@@ -43,20 +44,21 @@ const Component: React.FC<ComponentProps> = (props) => {
       })
       .map(([index, seat]) => ({
         ...seat,
+        index,
       }));
 
     setData(data);
   };
 
   React.useEffect(() => {
-    onUpdate('');
+    onUpdate("");
   }, []);
 
   return (
     <React.Fragment>
       <AutoComplete
         onSelect={onUpdate}
-        style={{ width: 200 }}
+        style={{ width: "100%" }}
         onSearch={onUpdate}
         placeholder="Search for a Clöudcannoneer"
       />
@@ -67,7 +69,13 @@ const Component: React.FC<ComponentProps> = (props) => {
         itemLayout="horizontal"
         dataSource={data ?? undefined}
         renderItem={(item) => (
-          <List.Item>
+          <List.Item
+            onClick={() => {
+              if (props.onPersonSelect) {
+                props.onPersonSelect(item.index);
+              }
+            }}
+          >
             <List.Item.Meta
               avatar={<Avatar src={item.profileImage} />}
               title={item.name}
@@ -80,4 +88,4 @@ const Component: React.FC<ComponentProps> = (props) => {
   );
 };
 
-export default Component;
+export default SearchSidebar;
