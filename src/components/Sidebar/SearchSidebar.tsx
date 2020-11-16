@@ -11,7 +11,7 @@ import People from "../../data/seats.json";
 export interface SearchSidebarProps {
   children?: any;
   people: typeof People;
-  onPersonSelect?: (seatId: number) => void;
+  onPersonSelect?: (seatId: keyof typeof People) => void;
 }
 
 /**
@@ -70,6 +70,9 @@ const SearchSidebar: React.FC<SearchSidebarProps> = (props) => {
         dataSource={data ?? undefined}
         renderItem={(item) => (
           <List.Item
+            css={css`
+              cursor: pointer;
+            `}
             onClick={() => {
               if (props.onPersonSelect) {
                 props.onPersonSelect(item.index);

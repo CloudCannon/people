@@ -2314,6 +2314,14 @@ html {
   outline: 0;
   -webkit-overflow-scrolling: touch;
 }
+
+.ant-select-selection-search, 
+.ant-select-selection-search-input {
+  outline: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 .ant-select-single .ant-select-selector {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2326,6 +2334,7 @@ html {
   bottom: 0;
   left: 11px;
 }
+
 .ant-select-single .ant-select-selector .ant-select-selection-search-input {
   width: 100%;
 }
