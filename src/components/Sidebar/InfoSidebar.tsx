@@ -12,7 +12,7 @@ import CloseIcon from "./close.svg";
  */
 export interface InfoSidebarProps {
   children?: any;
-  person: Partial<typeof People[keyof typeof People]>;
+  person: Partial<typeof People[keyof typeof People]> | null;
   onClose?: () => void;
 }
 
@@ -57,23 +57,27 @@ const InfoSidebar: React.FC<InfoSidebarProps> = (props) => {
           />
         )}
 
-        <Avatar size={200} src={props.person.profileImage} />
-        <h3
-          css={css`
-            margin: 30px 0 0 0;
-            font-size: 1.2rem;
-          `}
-        >
-          {props.person.name}
-        </h3>
-        <p
-          css={css`
-            margin: 10px 0 0 0;
-            font-size: 1.05rem;
-          `}
-        >
-          {props.person.title}
-        </p>
+        {props.person ? (
+          <React.Fragment>
+            <Avatar size={200} src={props.person.profileImage} />
+            <h3
+              css={css`
+                margin: 30px 0 0 0;
+                font-size: 1.2rem;
+              `}
+            >
+              {props.person.name}
+            </h3>
+            <p
+              css={css`
+                margin: 10px 0 0 0;
+                font-size: 1.05rem;
+              `}
+            >
+              {props.person.title}
+            </p>
+          </React.Fragment>
+        ) : null}
         {/* <p>{props.person.description}</p> */}
       </aside>
     </React.Fragment>

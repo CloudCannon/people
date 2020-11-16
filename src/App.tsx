@@ -47,7 +47,6 @@ const App: React.FC = () => {
             min-width: 294px;
             /* margin-left: 20px; */
             margin-right: 20px;
-
           `}
         >
           <SearchSidebar
@@ -69,23 +68,21 @@ const App: React.FC = () => {
             setCurrentPerson(id ? { ...People[key], id } : null);
           }}
         />{" "}
-        {currentPerson && (
-          <div
-            className="list-wrapper"
-            css={css`
-              width: 223px;
-              max-height: 100vh;
-              overflow: auto;
-              flex-shrink: 0;
-              padding: 0 44px;
-            `}
-          >
-            <InfoSidebar
-              person={currentPerson}
-              onClose={() => setCurrentPerson(null)}
-            />
-          </div>
-        )}
+        <div
+          className="list-wrapper"
+          css={css`
+            width: 223px;
+            max-height: 100vh;
+            overflow: auto;
+            flex-shrink: 0;
+            padding: 0 44px;
+          `}
+        >
+          <InfoSidebar
+            person={currentPerson}
+            onClose={currentPerson ? () => setCurrentPerson(null) : undefined}
+          />
+        </div>
       </main>
     </div>
   );
