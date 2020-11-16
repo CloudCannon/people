@@ -36,6 +36,7 @@ const App: React.FC = () => {
           flex-wrap: no-wrap;
           align-items: flex-start;
           justify-content: space-between;
+          margin: 0 30px;
         `}
       >
         <div
@@ -43,7 +44,8 @@ const App: React.FC = () => {
           css={css`
             max-height: 100vh;
             min-width: 294px;
-            padding-left: 10px;
+            /* margin-left: 20px; */
+            margin-right: 20px;
           `}
         >
           <SearchSidebar
