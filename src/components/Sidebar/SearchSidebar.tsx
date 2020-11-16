@@ -63,9 +63,6 @@ const SearchSidebar: React.FC<SearchSidebarProps> = (props) => {
         placeholder="Search for a Clöudcannoneer"
       />
       <List
-        css={css`
-          width: 400px;
-        `}
         itemLayout="horizontal"
         dataSource={data ?? undefined}
         renderItem={(item) => (

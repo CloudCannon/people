@@ -16,19 +16,20 @@ const App: React.FC = () => {
     typeof People[keyof typeof People] | null
   >(null);
   return (
-    <div className="App">
-      <h1
+    <div>
+      <header
         css={css`
-          margin-bottom: 54px;
+          padding: 20px 80px;
+          height: 100px;
         `}
       >
-        Cloudcannon People
-      </h1>
-      <p>
-        <a href="https://github.com/CloudCannon/people/issues">
-          Add a feature request
-        </a>
-      </p>
+        <h1>Cloudcannon People</h1>
+        <p>
+          <a href="https://github.com/CloudCannon/people/issues">
+            Add a feature request
+          </a>
+        </p>
+      </header>
       <main
         css={css`
           display: flex;
@@ -36,18 +37,19 @@ const App: React.FC = () => {
           align-items: flex-start;
         `}
       >
-        <aside
+        <div
           className="list-wrapper"
           css={css`
             max-height: 100vh;
-            overflow: auto;
+            min-width: 294px;
+            padding-left: 10px;
           `}
         >
           <SearchSidebar
             people={People}
             onPersonSelect={(person) => setCurrentPerson(People[person])}
           />
-        </aside>
+        </div>
         <SeatingMap
           seats={People}
           css={css`
@@ -56,15 +58,20 @@ const App: React.FC = () => {
           `}
         />{" "}
         {currentPerson && (
-          <aside
+          <div
             className="list-wrapper"
             css={css`
               max-height: 100vh;
               overflow: auto;
+              flex-shrink: 0;
+              padding: 0 44px;
             `}
           >
-            <InfoSidebar person={currentPerson} />
-          </aside>
+            <InfoSidebar
+              person={currentPerson}
+              onClose={() => setCurrentPerson(null)}
+            />
+          </div>
         )}
       </main>
     </div>
