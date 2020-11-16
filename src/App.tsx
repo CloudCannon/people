@@ -8,27 +8,14 @@ import SeatingMap from "./components/SeatingMap/SeatingMap";
 import "./antd.css";
 import { List, Avatar } from "antd";
 import People from "./data/seats.json";
+import { AutoComplete } from "antd";
+import Sidebar from "./components/Sidebar/Sidebar";
 
-// const data = [
-//   {
-//     title: "Ant Design Title 1",
-//   },
-//   {
-//     title: "Ant Design Title 2",
-//   },
-//   {
-//     title: "Ant Design Title 3",
-//   },
-//   {
-//     title: "Ant Design Title 4",
-//   },
-// ];
-
-const data = Object.entries(People).map(([index, seat]) => ({
-  ...seat
-}));
 
 function App() {
+  const [value, setValue] = React.useState("");
+  const [options, setOptions] = React.useState<{ value: string }[]>([]);
+
   return (
     <div className="App">
       <h1
@@ -50,28 +37,14 @@ function App() {
           align-items: flex-start;
         `}
       >
-        <div className="list-wrapper" css={css`
-          max-height: 100vh;
-          overflow: auto;
-        `}>
-          <List
-            css={css`
-              width: 400px;
-            `}
-            itemLayout="horizontal"
-            dataSource={data}
-            renderItem={(item) => (
-              <List.Item>
-                <List.Item.Meta
-                  avatar={
-                    <Avatar src={item.profileImage} />
-                  }
-                  title={<a href="https://ant.design">{item.name}</a>}
-                  description={item.title}
-                />
-              </List.Item>
-            )}
-          />
+        <div
+          className="list-wrapper"
+          css={css`
+            max-height: 100vh;
+            overflow: auto;
+          `}
+        >
+          <Sidebar people={People} />
         </div>
         <SeatingMap
           seats={People}
