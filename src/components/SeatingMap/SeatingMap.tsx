@@ -19,6 +19,7 @@ export interface SeatingMapProps {
   className?: string;
   seats: Record<string, any>;
   activeSeat?: string;
+  onPersonSelect?: (personId: string | null) => void;
 }
 
 /**
@@ -35,14 +36,22 @@ const SeatingMap: React.FC<SeatingMapProps> = (props) => {
   React.useEffect(() => {
     const elements = Array.from(document.querySelectorAll("[data-name]"));
     for (const element of elements) {
-      element.setAttribute("data-tooltip", "true");
-
-      element.classList.add("tooltip");
-      element.classList.add("seat");
       const number = (element as HTMLElement).dataset.name;
-      if (number) {
-        if (!(props.seats as Record<string, ProfileProps>)[number as string]) {
-          element.classList.add("empty");
+
+      if (number && props.seats[number]) {
+        element.setAttribute("data-tooltip", "true");
+        element.addEventListener("click", () => {
+          props.onPersonSelect?.(number ?? null);
+        });
+
+        element.classList.add("tooltip");
+        element.classList.add("seat");
+        if (number) {
+          if (
+            !(props.seats as Record<string, ProfileProps>)[number as string]
+          ) {
+            element.classList.add("empty");
+          }
         }
       }
     }

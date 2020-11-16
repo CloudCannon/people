@@ -59,6 +59,10 @@ const App: React.FC = () => {
             max-width: 1000px;
             width: 100%;
           `}
+          onPersonSelect={(id) => {
+            const key = id as keyof typeof People;
+            setCurrentPerson(id ? { ...People[key], id } : null);
+          }}
         />{" "}
         {currentPerson && (
           <div
