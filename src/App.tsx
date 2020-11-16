@@ -69,6 +69,7 @@ const App: React.FC = () => {
           <div
             className="list-wrapper"
             css={css`
+              width: 223px;
               max-height: 100vh;
               overflow: auto;
               flex-shrink: 0;
