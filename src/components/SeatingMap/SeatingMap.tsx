@@ -9,7 +9,7 @@ import { ReactComponent as SeatingMapRaw } from "../../data/seating-map.svg";
 import Profile, { ProfileProps } from "../Profile/Profile";
 import "./SeatingMap.scss";
 import Tooltip from "../Tooltip/Tooltip";
-import Seats from "../../data/seats.json";
+
 
 /**
  * Interface for SeatingMap props
@@ -18,6 +18,7 @@ export interface SeatingMapProps {
   children?: any;
   css?: any;
   className?: string;
+  seats: Record<string, any>;
 }
 
 /**
@@ -39,7 +40,7 @@ const SeatingMap: React.FC<SeatingMapProps> = (props) => {
       element.classList.add("seat");
       const number = (element as HTMLElement).dataset.name;
       if (number) {
-        if (!(Seats as Record<string, ProfileProps>)[number as string]) {
+        if (!(props.seats as Record<string, ProfileProps>)[number as string]) {
           element.classList.add("empty");
         }
       }
@@ -54,7 +55,7 @@ const SeatingMap: React.FC<SeatingMapProps> = (props) => {
           targetSelector="[data-tooltip]"
           onTargetChange={(e) => {
             if (e?.dataset.name) {
-              const person = Seats[e.dataset.name as "1"];
+              const person = props.seats[e.dataset.name];
               setHighlightedSeat(person ?? null);
             }
           }}
