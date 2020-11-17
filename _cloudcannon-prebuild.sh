@@ -1,2 +1,6 @@
 npm i
-npm run build
+if [[ -z "${STORYBOOK}" ]]; then
+  npm run build-storybook
+else
+  npm run build 
+fi
