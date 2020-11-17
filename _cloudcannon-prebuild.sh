@@ -1,5 +1,5 @@
 npm i
-if [[ -z "${STORYBOOK}" ]]; then
+if [ "$STORYBOOK" = "foo" ] then
   npm run build-storybook
 else
   npm run build 
