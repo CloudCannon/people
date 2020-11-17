@@ -1,5 +1,5 @@
 npm i
-if [ "$STORYBOOK" == "true" ] 
+if [ "$STORYBOOK" ] 
 then
   npm run build-storybook
 else
