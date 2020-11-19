@@ -12,16 +12,16 @@
     "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/3716a9d6b9558598cbb0aca41483a9bd.jpg"
   },
   "3": {
-    "name": "Aleksandr Gordeev",
-    "title": "Support & Services Engineer",
-    "slackLink": "",
-    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U01848579B3-84db28690a37-512"
-  },
-  "4": {
     "name": "Robbie Cook",
     "title": "Support & Services Engineer",
     "slackLink": "",
     "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/50136bf90ae971d4ac1ed51e47b5cab1.jpg"
+  },
+  "4": {
+    "name": "Aleksandr Gordeev",
+    "title": "Support & Services Engineer",
+    "slackLink": "",
+    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U01848579B3-84db28690a37-512"
   },
   "5": {
     "name": "Ryan Collins",
