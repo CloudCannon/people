@@ -5,7 +5,7 @@ import { jsx, css } from "@emotion/react";
 import React from "react";
 import SeatingMap from "./components/SeatingMap/SeatingMap";
 import "./antd.scss";
-import { List, Avatar } from "antd";
+import { List, Avatar, Button } from "antd";
 import People from "./data/seats.json";
 import { AutoComplete } from "antd";
 import SearchSidebar from "./components/Sidebar/SearchSidebar";
@@ -26,6 +26,10 @@ const App: React.FC = () => {
         css={css`
           padding: 10px 30px;
           height: 137px;
+
+          @media screen and (max-width: 600px) {
+            height: auto;
+          }
         `}
       >
         <h1>Cloudcannon People</h1>
