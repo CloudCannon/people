@@ -31,12 +31,4 @@ const Template: Story<SearchSidebarProps> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  person: {
-    name: "Robbie Cook",
-    profileImage: ExampleImage,
-    title: "Legend",
-  },
-  onClose: () => {
-    console.log("closed");
-  },
 };
