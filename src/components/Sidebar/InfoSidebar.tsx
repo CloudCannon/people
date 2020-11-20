@@ -14,6 +14,7 @@ export interface InfoSidebarProps {
   children?: any;
   person: Partial<typeof People[keyof typeof People]> | null;
   onClose?: () => void;
+  className?: string;
 }
 
 /**
@@ -23,6 +24,7 @@ const InfoSidebar: React.FC<InfoSidebarProps> = (props) => {
   return (
     <React.Fragment>
       <aside
+        className={props.className}
         css={css`
           display: flex;
           flex-direction: column;
@@ -75,6 +77,14 @@ const InfoSidebar: React.FC<InfoSidebarProps> = (props) => {
               `}
             >
               {props.person.title}
+            </p>
+            <p
+              css={css`
+                margin: 25px 0 0 0;
+                font-size: 1rem;
+              `}
+            >
+              {props.person.description}
             </p>
           </React.Fragment>
         ) : null}

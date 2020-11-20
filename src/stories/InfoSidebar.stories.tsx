@@ -9,7 +9,6 @@ import ExampleImage from "./images/example-image.png";
 import InfoSidebar, {
   InfoSidebarProps,
 } from "../components/Sidebar/InfoSidebar";
-import { profile } from "console";
 
 export default {
   title: "Sidebar/InfoSidebar",
@@ -35,6 +34,7 @@ Primary.args = {
     name: "Robbie Cook",
     profileImage: ExampleImage,
     title: "Legend",
+    description: "Robbie is a legend."
   },
   onClose: () => {
     console.log("closed");

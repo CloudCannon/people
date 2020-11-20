@@ -3,132 +3,154 @@
     "name": "Liam Bigelow",
     "title": "Head of Services",
     "slackLink": "https://cloudcannon.slack.com/team/UB5JMK7T5",
-    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/ddc363cf7a6daee0e72fe17b6a41650f.jpg"
+    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/ddc363cf7a6daee0e72fe17b6a41650f.jpg",
+    "description": "Head dog of services, Liam, leads services projects. He's one of the OGs, and has one awwwards for his work in web dev. Legend."
   },
   "2": {
     "name": "Jordan Trbuhovic",
     "title": "Support & Services Engineer",
     "slackLink": "",
-    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/3716a9d6b9558598cbb0aca41483a9bd.jpg"
+    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/3716a9d6b9558598cbb0aca41483a9bd.jpg",
+    "description": "Jordan is a grandpappy of the websites. He know them. Hit him up with questions like: 'How do I use cloudcannon.' and 'what is a website?'."
   },
   "3": {
     "name": "Robbie Cook",
     "title": "Support & Services Engineer",
     "slackLink": "",
-    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/50136bf90ae971d4ac1ed51e47b5cab1.jpg"
+    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/50136bf90ae971d4ac1ed51e47b5cab1.jpg",
+    "description": ""
   },
   "4": {
     "name": "Aleksandr Gordeev",
     "title": "Support & Services Engineer",
     "slackLink": "",
-    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U01848579B3-84db28690a37-512"
+    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U01848579B3-84db28690a37-512",
+    "description": ""
   },
   "5": {
     "name": "Ryan Collins",
     "title": "Support & Services Engineer",
     "slackLink": "",
-    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/2d08e67f87a3ed0b16cabc1eb4e8c312.jpg"
+    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/2d08e67f87a3ed0b16cabc1eb4e8c312.jpg",
+    "description": "Ryan \"Support\" Collins is a jack-of-all-trades legend, who is simultaneously the lead support engineer, a main services developer, and a components library builder."
   },
   "7": {
     "name": "Tate Kennington",
     "title": "Support & Services Engineer",
     "slackLink": "",
-    "profileImage": "https://ca.slack-edge.com/T027R9XD3-UPTLVUZG9-ff1ff667f266-512"
+    "profileImage": "https://ca.slack-edge.com/T027R9XD3-UPTLVUZG9-ff1ff667f266-512",
+    "description": ""
   },
   "8": {
     "name": "Amber Song",
     "title": "Services Intern",
     "slackLink": "",
-    "profileImage": ""
+    "profileImage": "",
+    "description": ""
   },
   "9": {
     "name": "Magdeline Huang",
     "title": "Services Intern",
     "slackLink": "",
-    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U01EZEL0MH6-e651d17f9ef4-512"
+    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U01EZEL0MH6-e651d17f9ef4-512",
+    "description": ""
   },
   "10": {
     "name": "Farrel Burns",
     "title": "Developer Evangelist",
     "slackLink": "",
-    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U01B3QACRPE-69bd61ebd6d0-512"
+    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U01B3QACRPE-69bd61ebd6d0-512",
+    "description": ""
   },
   "11": {
     "name": "Pedro",
     "title": "Marketer",
     "slackLink": "",
-    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U01D531BHL0-42ca7de963c7-512"
+    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U01D531BHL0-42ca7de963c7-512",
+    "description": ""
   },
   "12": {
     "name": "Haowei Yu",
     "title": "Marketer and Designer",
     "slackLink": "",
-    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/adc4b5b43871b0a26f6dde09ec9cddf7.jpg"
+    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/adc4b5b43871b0a26f6dde09ec9cddf7.jpg",
+    "description": ""
   },
   "13": {
     "name": "George Phillips",
     "title": "CTO / Cofounder",
     "slackLink": "",
-    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/84a90dd23d1342334f22208935163190.jpg"
+    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/84a90dd23d1342334f22208935163190.jpg",
+    "description": ""
   },
   "14": {
     "name": "Jonatah Benatti",
     "title": "Application Engineer",
     "slackLink": "",
-    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U010E8SGT7C-5ff26f8998b2-512"
+    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U010E8SGT7C-5ff26f8998b2-512",
+    "description": ""
   },
   "15": {
     "name": "Nathan Kennedy",
     "title": "Application Engineer",
     "slackLink": "",
-    "profileImage": "https://ca.slack-edge.com/T027R9XD3-UPQ4G54P5-d53861ea8e66-512"
+    "profileImage": "https://ca.slack-edge.com/T027R9XD3-UPQ4G54P5-d53861ea8e66-512",
+    "description": ""
   },
   "16": {
     "name": "Ross Phillips",
     "title": "Application Engineer",
     "slackLink": "",
-    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/ef1d74a78c60e95e07d3e8e6caef607e.jpg"
+    "profileImage": "https://d1qmdf3vop2l07.cloudfront.net/citron-cornet.cloudvent.net/hash-store/ef1d74a78c60e95e07d3e8e6caef607e.jpg",
+    "description": ""
   },
   "17": {
     "name": "Dave Strydom",
     "title": "UI / UX Designer",
     "slackLink": "",
-    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U019RLWAGGP-16d35a91c47b-512"
+    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U019RLWAGGP-16d35a91c47b-512",
+    "description": ""
   },
   "18": {
     "name": "Mel",
     "title": "Support & Services Engineer",
     "slackLink": "",
-    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U018Y7T8CKE-b84814a08c53-512"
+    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U018Y7T8CKE-b84814a08c53-512",
+    "description": ""
   },
   "19": {
     "name": "Alex Nelson",
     "title": "UX / UI Designer",
     "slackLink": "",
-    "profileImage": "https://ca.slack-edge.com/T027R9XD3-UHYJ9T5M0-44a269f2c2f0-512"
+    "profileImage": "https://ca.slack-edge.com/T027R9XD3-UHYJ9T5M0-44a269f2c2f0-512",
+    "description": ""
   },
   "20": {
     "name": "Vic",
     "title": "UI / UX Designer",
     "slackLink": "",
-    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U01D6RKPQKT-87422d42f23d-512"
+    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U01D6RKPQKT-87422d42f23d-512",
+    "description": ""
   },
   "21": {
     "name": "Chris Wingate",
-    "title": "CFO / Professional Footballer",
+    "title": "CFO",
     "slackLink": "",
-    "profileImage": "https://ca.slack-edge.com/T027R9XD3-UPU9W152B-fc79642b2721-512"
+    "profileImage": "https://ca.slack-edge.com/T027R9XD3-UPU9W152B-fc79642b2721-512",
+    "description": "Chris is the first person at cloudcannon to have his own Wikipedia page. He's also Mr Worldwide©. Legend."
   },
   "22": {
     "name": "Mike Neumegen",
     "title": "CEO / Co-founder",
     "slackLink": "",
-    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U027R9XD7-5c52a99656aa-512"
+    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U027R9XD7-5c52a99656aa-512",
+    "description": ""
   },
   "23": {
     "name": "Maryke",
     "title": "HR Manager",
     "slackLink": "",
-    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U010CL1J79A-376828101b49-512"
+    "profileImage": "https://ca.slack-edge.com/T027R9XD3-U010CL1J79A-376828101b49-512",
+    "description": ""
   }
 }
