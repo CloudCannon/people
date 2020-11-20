@@ -82,6 +82,7 @@ const InfoSidebar: React.FC<InfoSidebarProps> = (props) => {
               css={css`
                 margin: 25px 0 0 0;
                 font-size: 1rem;
+                line-height: 1.6rem;
               `}
             >
               {props.person.description}
