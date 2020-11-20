@@ -85,6 +85,7 @@ const App: React.FC = () => {
             overflow: auto;
             flex-shrink: 0;
             background-color: ${currentPerson ? 'rgb(255 255 255 / 80%);' : 'transparent'};
+            pointer-events: ${currentPerson ? 'all' : 'none'};
 
             // mobile
             @media screen and (max-width: 920px) {
