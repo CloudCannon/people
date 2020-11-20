@@ -78,6 +78,14 @@ const InfoSidebar: React.FC<InfoSidebarProps> = (props) => {
             >
               {props.person.title}
             </p>
+            <p
+              css={css`
+                margin: 25px 0 0 0;
+                font-size: 1rem;
+              `}
+            >
+              {props.person.description}
+            </p>
           </React.Fragment>
         ) : null}
         {/* <p>{props.person.description}</p> */}
