@@ -80,14 +80,27 @@ const App: React.FC = () => {
         <div
           className="list-wrapper"
           css={css`
-            width: 223px;
+   
             max-height: 100vh;
             overflow: auto;
             flex-shrink: 0;
-            padding: 0 44px;
+            background-color: ${currentPerson ? 'rgb(255 255 255 / 80%);' : 'transparent'};
+
+            // mobile
+            @media screen and (max-width: 920px) {
+              position: absolute;
+              right: 0;
+              top: 30px;
+            }
           `}
         >
           <InfoSidebar
+            css={css`
+
+              height: 100vh;
+              padding: 0 44px;
+              width: 223px;
+            `}
             person={currentPerson}
             onClose={currentPerson ? () => setCurrentPerson(null) : undefined}
           />
